@@ -261,8 +261,8 @@ function setup() {
 
   // // Create a dangling string
   for (let i = 0; i < numStrings; i++) {
-    let stringX = random(100, width - 100);
-    let string = new String(stringX);
+    let stringX = width / (numStrings + 1);
+    let string = new String(stringX * (i + 1));
     strings.push(string);
   }
   // let spacing = length / numSprings;

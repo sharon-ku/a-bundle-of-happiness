@@ -5,7 +5,7 @@ class String {
     this.spring = [];
     this.numParticles = 50;
     this.numSprings = this.numParticles - 1;
-    this.length = 300;
+    this.length = random(200, 400);
     this.stiffness = 0.9;
     this.spacing = this.length / this.numSprings;
 
