@@ -1,0 +1,109 @@
+body {
+  background: #1b1b1b;
+}
+
+.hero hgroup {
+  width: 37%;
+  margin-left: 80px;
+  top: 100px;
+  color: #c79a68;
+}
+
+.hero hgroup h1 {
+  /* text-align: left; */
+  font-size: 8em;
+  padding: 40px;
+  /* background: blue; */
+  /* letter-spacing: 3px; */
+}
+
+.hero figure {
+  width: 90%;
+  right: 0px;
+  top: 50px;
+
+  max-width: 1200px;
+}
+
+.hero figure img {
+  width: 100%;
+}
+
+.content figure {
+  /* margin-top: 80px; */
+  width: 90%;
+  overflow: hidden;
+}
+
+.content video {
+  /* code from: https://stackoverflow.com/questions/16853203/unwanted-border-appearing-on-video-element */
+  /* hide overflow of video */
+  width: 102%;
+  height: 102%;
+  left: -5px;
+  margin: -10px;
+  top: 0;
+}
+
+.content figure img {
+  /* margin-bottom: 50px; */
+}
+
+.link_to_next_page a:hover {
+  background: #3f738c;
+  color: #a0e1ec;
+}
+
+/* TOP NAVIGATION NAV */
+
+.top-navigation a:link,
+.top-navigation a:visited,
+.top-navigation a:active {
+  /* no background */
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid #3f738c;
+  border-radius: 50px;
+  /* blue */
+  color: #3f738c;
+}
+
+.top-navigation a.active {
+  /* no background */
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid #3f738c;
+  border-radius: 50px;
+  /* blue */
+  color: #3f738c;
+}
+
+.top-navigation a:hover {
+  /* blue */
+  background: #3f738c;
+  border: 3px solid #3f738c;
+  border-radius: 50px;
+  color: white;
+}
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
+  .hero hgroup {
+    width: 37%;
+    margin-left: 80px;
+    top: 100px;
+  }
+
+  .hero hgroup h1 {
+    /* text-align: center; */
+    font-size: 2.7em;
+    padding: 40px;
+  }
+
+  .hero figure {
+    width: 90%;
+    right: 0px;
+    top: 200px;
+
+    max-width: 1200px;
+    min-width: 500px;
+  }
+}

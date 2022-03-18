@@ -1,0 +1,78 @@
+body {
+  background: #8bcd88;
+}
+
+.hero hgroup {
+  width: 37%;
+  margin-left: 80px;
+  top: 100px;
+  color: white;
+}
+
+.hero hgroup h1 {
+  /* text-align: left; */
+  font-size: 8em;
+  padding: 40px;
+  /* background: blue; */
+  /* letter-spacing: 3px; */
+}
+
+.hero .chicks-image figure {
+  position: fixed;
+  left: 600px;
+  top: 320px;
+  width: 360px;
+}
+
+.hero figure {
+  width: 50%;
+  max-width: 600px;
+  right: 50px;
+  top: 40px;
+}
+
+.hero figure img {
+  width: 100%;
+}
+
+.content figure {
+  width: 90%;
+}
+
+.link_to_next_page a:hover {
+  background: #dfab7c;
+  color: black;
+}
+
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
+@media only screen and (max-width: 980px) {
+  .hero .chicks-image figure {
+    position: fixed;
+    left: 300px;
+    top: 300px;
+    width: 200px;
+  }
+}
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
+  .hero hgroup {
+    width: 70%;
+    margin-left: 0px;
+    top: 190px;
+  }
+
+  .hero .chicks-image figure {
+    left: 200px;
+    top: 300px;
+    width: 200px;
+  }
+
+  .hero figure {
+    width: 50%;
+    max-width: 600px;
+    min-width: 250px;
+    right: 30px;
+    top: 60px;
+  }
+}

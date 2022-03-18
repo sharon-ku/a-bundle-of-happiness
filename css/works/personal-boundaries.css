@@ -1,0 +1,67 @@
+body {
+  background: #7eb0d4;
+}
+
+.hero hgroup {
+  width: 37%;
+  margin-left: 150px;
+  top: 130px;
+  color: #fde0e7;
+}
+
+.hero hgroup h1 {
+  /* text-align: left; */
+  /* padding: 40px; */
+  /* background: blue; */
+  /* letter-spacing: 3px; */
+}
+
+.extra-space {
+  height: 100px;
+}
+
+.hero figure {
+  width: 40%;
+  right: 150px;
+  top: 50px;
+
+  max-width: 800px;
+}
+
+.hero figure img {
+  width: 100%;
+}
+
+.content figure {
+  width: 90%;
+}
+
+.link_to_next_page a:hover {
+  background: #0c636a;
+  color: #2de3f0;
+}
+
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
+@media only screen and (max-width: 980px) {
+  .hero figure {
+    top: 60px;
+
+    max-width: 800px;
+  }
+}
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
+  .hero hgroup {
+    width: 37%;
+    margin-left: 30px;
+    top: 70px;
+  }
+
+  .hero figure {
+    top: 200px;
+
+    max-width: 800px;
+    min-width: 300px;
+  }
+}

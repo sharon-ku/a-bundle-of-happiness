@@ -1,0 +1,70 @@
+body {
+  background: #789076;
+}
+
+.hero hgroup {
+  width: 37%;
+  margin-left: 80px;
+  top: 200px;
+  color: white;
+}
+
+.hero hgroup h1 {
+  /* text-align: left; */
+
+  /* background: blue; */
+  /* letter-spacing: 3px; */
+}
+
+.hero figure {
+  width: 30%;
+  right: 220px;
+  top: 40px;
+
+  max-width: 350px;
+}
+
+.hero figure img {
+  width: 100%;
+}
+
+.content figure {
+  width: 90%;
+}
+
+.content figure img {
+  /* margin-bottom: 50px; */
+}
+
+.phone-mockup img {
+  padding: 0 200px;
+}
+
+.link_to_next_page a:hover {
+  background: #dfab7c;
+  color: black;
+}
+
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
+@media only screen and (max-width: 980px) {
+  .hero figure {
+    right: 100px;
+  }
+}
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
+  .hero hgroup {
+    width: 37%;
+    margin-left: 50px;
+    top: 80px;
+  }
+
+  .hero figure {
+    width: 30%;
+    right: 100px;
+    top: 180px;
+
+    max-width: 350px;
+  }
+}

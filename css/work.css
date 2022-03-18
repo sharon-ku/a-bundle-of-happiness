@@ -1,0 +1,343 @@
+/* === DESKTOP LAYOUT INHERITS FROM MOBILE AND TABLET 980PX and higher === */
+
+body {
+  overflow: visible;
+}
+
+section.hero {
+  height: 90vh;
+  max-height: 600px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.extra-space {
+  height: 40px;
+}
+
+.hero hgroup {
+  position: fixed;
+  z-index: -1;
+}
+
+.hero hgroup h1 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 6em;
+  padding: 60px 200px;
+  line-height: 1.2em;
+}
+
+.hero hgroup p {
+  font-family: "Poppins", Arial, sans-serif;
+  /* light blue */
+  color: #b1eaf4;
+  /* text-align: center; */
+  padding: 0 40px;
+  /* background: orange; */
+}
+
+.hero figure {
+  position: fixed;
+  z-index: -2;
+  max-width: 700px;
+}
+
+.hero figure img {
+}
+
+section.content {
+  /* light grey */
+  background: #ebebeb;
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+
+section.inner-content {
+  /* light grey */
+  background: #ebebeb;
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: center;
+
+  max-width: 1300px;
+
+  /* max-width: 1300px;
+  margin: 0px auto; */
+}
+
+.inner-content .row {
+}
+
+.content p {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0px 150px;
+  margin-bottom: 70px;
+  font-size: 1.3em;
+}
+
+.content h2 {
+  font-family: "Poppins", Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 80px 150px;
+  font-size: 1.5em;
+}
+
+.content figure {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.content figure img {
+  width: 100%;
+
+  /* max-width: 1300px;
+  margin: 0px auto; */
+}
+
+.content .notes {
+  width: 90%;
+  margin: 0 80px;
+  /* background: orange;
+  columns: auto 2; */
+  /* text-align: left;
+  justify-content: start; */
+  margin-bottom: 100px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.content .notes .row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  /* column: auto 2; */
+  /* background: orange; */
+  width: 100%;
+}
+
+.content .notes .row .col {
+  width: 70%;
+  /* background: green; */
+}
+
+.content .notes h1 {
+  margin-top: 30px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  /* background: orange; */
+  margin-right: 30px;
+  border-bottom: 2px solid black;
+}
+
+.content .notes p {
+  margin: 0px 0px;
+  margin-bottom: 10px;
+  line-height: 1.2em;
+  font-size: 1.1em;
+  /* font-size: 1em; */
+  /* background: green; */
+}
+
+.content .notes a {
+  color: darkblue;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.content .notes a:hover {
+  text-decoration: underline;
+}
+
+.add-margin-below {
+  margin-bottom: 70px;
+  width: 100%;
+}
+
+.content .source {
+  font-size: 1em;
+  text-transform: uppercase;
+  padding-bottom: 80px;
+  margin: 40px;
+}
+
+.content .video-container {
+  width: 90%;
+  overflow: hidden;
+}
+
+.content #designers {
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.content nav {
+  display: flex;
+  width: 100%;
+  letter-spacing: 0.05em;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 10px 10px 50px;
+  height: 100px;
+  /* background: blue; */
+  font-family: "Poppins", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.content nav {
+  /* background: #212226; */
+}
+
+.content nav a:link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  height: 80%;
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+  border: 3px solid black;
+  transition: all 0.3s;
+}
+
+.content nav a:visited {
+  color: black;
+  border: 3px solid black;
+}
+
+.content nav a:hover {
+  font-weight: bold;
+  border: 10px solid black;
+}
+
+.content nav a:active {
+}
+
+/* Link to next page ------------------------------------ */
+
+nav.link_to_next_page {
+  background: #212226; /* raisin black */
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05em;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: normal;
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link_to_next_page a:link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.link_to_next_page a:visited {
+  color: #fff;
+}
+
+.link_to_next_page a:hover {
+}
+
+.link_to_next_page a:active {
+  color: #fff;
+}
+
+.text_container {
+  margin-right: 70px;
+}
+
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
+@media only screen and (max-width: 980px) {
+  section.hero {
+    max-height: 500px;
+  }
+
+  .content p {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 45px 70px;
+    font-size: 1.3em;
+  }
+
+  .content figure {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
+  .content p {
+    margin: 45px 50px;
+    font-size: 1em;
+  }
+
+  .content nav {
+    margin: 30px 30px 0px 30px;
+    height: 70px;
+    font-size: 1.1em;
+  }
+
+  .content nav a:link {
+    width: 270px;
+  }
+
+  .add-margin-below img {
+    margin-bottom: 10px;
+  }
+
+  nav.link_to_next_page {
+    background: #212226; /* raisin black */
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: normal;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .link_to_next_page a:link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+
+  .text_container {
+    margin: 0 40px;
+  }
+}

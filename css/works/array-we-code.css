@@ -1,0 +1,61 @@
+body {
+  background: #dfab7c;
+}
+
+.hero hgroup {
+  width: 50%;
+  margin-left: 150px;
+  top: 100px;
+  color: black;
+}
+
+.hero hgroup h1 {
+  /* text-align: left; */
+  /* padding: 40px; */
+  /* background: blue; */
+  /* letter-spacing: 3px; */
+}
+
+.hero figure {
+  width: 50%;
+  right: 150px;
+  top: 35px;
+
+  max-width: 550px;
+}
+
+.hero figure img {
+  transform: rotate(10deg);
+  width: 150%;
+}
+
+.content figure {
+  width: 90%;
+}
+
+iframe {
+  margin-top: 100px;
+}
+
+.link_to_next_page a:hover {
+  background: #c3cd7e;
+  color: #529c95;
+}
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
+  .hero hgroup {
+    width: 37%;
+    margin-left: 20px;
+    top: 220px;
+  }
+
+  .hero figure {
+    width: 50%;
+    right: 50px;
+    top: 100px;
+
+    max-width: 550px;
+    min-width: 150px;
+  }
+}
