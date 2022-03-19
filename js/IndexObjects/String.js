@@ -6,8 +6,8 @@ class String {
     this.numParticles = 50;
     this.numSprings = this.numParticles - 1;
 
-    this.minLength = 300;
-    this.maxLength = 700;
+    this.minLength = 200;
+    this.maxLength = 650;
     this.length = random(this.minLength, this.maxLength);
 
     this.stiffness = 0.9;
@@ -76,6 +76,7 @@ class String {
     // Display photo frame image
     push();
     imageMode(CENTER);
+
     this.photoFrame.x = this.particles[this.numParticles - 1].x;
     this.photoFrame.y =
       this.particles[this.numParticles - 1].y + photoFrameImage.height / 2;

@@ -70,6 +70,18 @@ body {
 
 /* CURSOR ENDS HERE */
 
+#test-frame-layout {
+  position: fixed;
+  top: 200px;
+  width: 100%;
+  text-align: center;
+  /* width: 50%; */
+}
+
+#test-frame-layout img {
+  /* width: 100%; */
+}
+
 section#logo {
   position: fixed;
   top: 28px;
