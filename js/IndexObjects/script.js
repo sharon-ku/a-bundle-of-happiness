@@ -126,15 +126,6 @@ let numBigBubbles = 5;
 let strings = [];
 let numStrings = 5;
 
-// // Built modifying code from The Nature of Code by Daniel Shiffman natureofcode.com
-// let physics;
-// let particles = [];
-// let spring = [];
-// let numParticles = 50;
-// let numSprings = numParticles - 1;
-// let length = 300;
-// let stiffness = 0.9;
-
 let photoFrames = [];
 let photoFrameScale = 1;
 let photoFrameImage = undefined;
@@ -261,40 +252,26 @@ function setup() {
 
   // // Create a dangling string
   for (let i = 0; i < numStrings; i++) {
-    let stringX = width / (numStrings + 1);
-    let string = new String(stringX * (i + 1));
+    let stringX;
+    let string;
+    if (width < 1000) {
+      stringX = width / (numStrings + 1);
+      string = new String(stringX * (i + 1));
+    } else {
+      let totalStringSpan = 800;
+      let distBetweenStrings = totalStringSpan / (numStrings - 1);
+
+      let midStringX = width / 2;
+
+      let firstStringPositionX =
+        midStringX - floor(numStrings / 2) * distBetweenStrings;
+      stringX = firstStringPositionX + distBetweenStrings * i;
+
+      string = new String(stringX);
+    }
+
     strings.push(string);
   }
-  // let spacing = length / numSprings;
-
-  // // Initialize the physics
-  // physics = new VerletPhysics2D();
-  // physics.addBehavior(new GravityBehavior(new Vec2D(0, 0.5)));
-  //
-  // // Set the world's bounding box
-  // physics.setWorldBounds(new Rect(0, 0, width, height));
-  //
-  // // Make particles
-  // for (var i = 0; i < numParticles; i++) {
-  //   particles[i] = new Particle(new Vec2D(width / 2, i * spacing));
-  //
-  //   // Anything we make, we have to add into the physics world
-  //   physics.addParticle(particles[i]);
-  //
-  //   if (i > 0) {
-  //     // Make a spring connecting both Particles
-  //     spring[i - 1] = new VerletSpring2D(
-  //       particles[i - 1],
-  //       particles[i],
-  //       spacing,
-  //       stiffness
-  //     );
-  //     physics.addSpring(spring[i - 1]);
-  //   }
-  // }
-
-  // // Lock one in place
-  // particles[0].lock();
 }
 
 function switchAnchorObject() {
@@ -360,8 +337,7 @@ function draw() {
   //   // spark.display();
   // }
 
-  // // Update dangling string
-  // updateString();
+  // Update dangling string
   for (let i = 0; i < strings.length; i++) {
     strings[i].update();
   }
@@ -398,54 +374,6 @@ function updateTableElements() {
 
   // Draw all sprites: whale animation, plant animation
   drawSprites();
-}
-
-function updateString() {
-  // // Update the physics world
-  // physics.update();
-  //
-  // // background(51);
-  //
-  // // Draw a line between the particles
-  // stroke(200);
-  // strokeWeight(2);
-  //
-  // // Display the particles
-  // for (let i = 0; i < numParticles; i++) {
-  //   if (i > 0) {
-  //     line(
-  //       particles[i - 1].x,
-  //       particles[i - 1].y,
-  //       particles[i].x,
-  //       particles[i].y
-  //     );
-  //   }
-  // }
-  //
-  // // Display photo frame image
-  // push();
-  // imageMode(CENTER);
-  // translate(
-  //   particles[numParticles - 1].x,
-  //   particles[numParticles - 1].y + photoFrameImage.height / 2
-  // );
-  // scale(photoFrameScale);
-  // photoFrameScale = map(particles[numParticles - 1].x, 307, 537, 0.7, 1);
-  // image(photoFrameImage, 0, 0);
-  // pop();
-  //
-  // // Move the last particle according to the mouse
-  // if (mouseIsPressed) {
-  //   particles[numParticles - 1].x = mouseX;
-  //   particles[numParticles - 1].x = constrain(
-  //     particles[numParticles - 1].x,
-  //     146,
-  //     340
-  //   );
-  //   // particles[numParticles-1].y = mouseY;
-  //
-  //   console.log(mouseX);
-  // }
 }
 
 // Create butterflies that have the following behaviours:

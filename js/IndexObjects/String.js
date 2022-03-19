@@ -5,7 +5,11 @@ class String {
     this.spring = [];
     this.numParticles = 50;
     this.numSprings = this.numParticles - 1;
-    this.length = random(200, 400);
+
+    this.minLength = 300;
+    this.maxLength = 700;
+    this.length = random(this.minLength, this.maxLength);
+
     this.stiffness = 0.9;
     this.spacing = this.length / this.numSprings;
 
@@ -76,7 +80,9 @@ class String {
     this.photoFrame.y =
       this.particles[this.numParticles - 1].y + photoFrameImage.height / 2;
     translate(this.photoFrame.x, this.photoFrame.y);
+    photoFrameScale = map(this.length, this.minLength, this.maxLength, 1, 0.8);
     scale(photoFrameScale);
+
     // photoFrameScale = map(
     //   this.particles[this.numParticles - 1].x,
     //   307,
@@ -84,7 +90,11 @@ class String {
     //   0.7,
     //   1
     // );
-    image(photoFrameImage, 0, 0);
+    image(
+      photoFrameImage,
+      0,
+      0 - ((1 - photoFrameScale) * photoFrameImage.height) / 2
+    );
     pop();
 
     // Move the last particle according to the mouse
