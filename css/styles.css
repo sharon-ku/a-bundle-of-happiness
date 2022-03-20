@@ -192,8 +192,11 @@ section.article {
   display: flex;
   flex-flow: column;
   height: 70vh;
-  justify-content: center;
-  align-items: center;
+
+  margin-left: 20px;
+  margin-top: 15px;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 section.my-name {
@@ -217,8 +220,7 @@ section.my-name {
   font-weight: normal;
   /* light blue */
   color: #b1eaf4;
-  text-align: center;
-  font-size: 4em;
+  font-size: 2em;
   letter-spacing: 3px;
   /* text-transform: uppercase; */
 }
@@ -227,7 +229,7 @@ section.my-name {
   font-family: "Poppins", Arial, sans-serif;
   /* light blue */
   color: #b1eaf4;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 10px;
 
   /* background: green; */
@@ -496,6 +498,52 @@ footer p {
 
 /* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
 @media only screen and (max-width: 980px) {
+  /* COPY PASTED CENTERING TEXT INFO */
+  section.my-name {
+    width: 100%;
+    user-select: none;
+  }
+
+  .my-name h1 {
+    font-family: "Poppins", Arial, sans-serif;
+    /* font-family: "Buda", cursive; */
+    /* font-family: "Alice", serif; */
+    /* font-family: "Mansalva", cursive; */
+    /* font-family: "Forum", cursive; */
+    /* font-family: "Sorts Mill Goudy", serif; */
+
+    /* font-family: basel-neue, sans-serif;
+    font-weight: 700;
+    font-style: normal; */
+
+    /* font-family: "Marcellus", serif; */
+    font-weight: normal;
+    /* light blue */
+    color: #b1eaf4;
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: 3px;
+    /* text-transform: uppercase; */
+  }
+
+  #my-description {
+    font-family: "Poppins", Arial, sans-serif;
+    /* light blue */
+    color: #b1eaf4;
+    text-align: center;
+    margin-top: 10px;
+
+    /* background: green; */
+  }
+
+  #my-description p {
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    max-width: 400px;
+  }
+
+  /* STOPPED COPY PASTE HERE */
+
   #table-of-contents h1 {
     font-size: 3em;
     /* margin-bottom: 20px; */

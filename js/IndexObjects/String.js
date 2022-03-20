@@ -1,5 +1,5 @@
 class String {
-  constructor(x) {
+  constructor(x, images) {
     this.physics;
     this.particles = [];
     this.spring = [];
@@ -7,13 +7,14 @@ class String {
     this.numSprings = this.numParticles - 1;
 
     this.minLength = 200;
-    this.maxLength = 650;
+    this.maxLength = 600;
     this.length = random(this.minLength, this.maxLength);
 
     this.stiffness = 0.9;
     this.spacing = this.length / this.numSprings;
 
     this.x = x;
+    this.images = images;
 
     // Initialize the physics
     this.physics = new VerletPhysics2D();
@@ -81,7 +82,7 @@ class String {
     this.photoFrame.y =
       this.particles[this.numParticles - 1].y + photoFrameImage.height / 2;
     translate(this.photoFrame.x, this.photoFrame.y);
-    photoFrameScale = map(this.length, this.minLength, this.maxLength, 1, 0.8);
+    photoFrameScale = map(this.length, this.minLength, this.maxLength, 0.8, 1);
     scale(photoFrameScale);
 
     // photoFrameScale = map(
@@ -92,7 +93,7 @@ class String {
     //   1
     // );
     image(
-      photoFrameImage,
+      this.images[0],
       0,
       0 - ((1 - photoFrameScale) * photoFrameImage.height) / 2
     );

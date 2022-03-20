@@ -130,12 +130,23 @@ let photoFrames = [];
 let photoFrameScale = 1;
 let photoFrameImage = undefined;
 
+let photoFrameImages = [];
+let numPhotoFrameImages = 5;
+
 // preload()
 //
 // Preloads assets (images, sounds, fonts)
 function preload() {
   // load photo frame image
   photoFrameImage = loadImage(`assets/images/photo-frame.png`);
+
+  // Load photo frame images
+  for (let i = 0; i < numPhotoFrameImages; i++) {
+    let image = loadImage(
+      `assets/images/index/photo-frames/photo-frame${i}.png`
+    );
+    photoFrameImages.push(image);
+  }
 
   // store images of butterfly inside butterflyImages array
   for (let i = 0; i < NUM_BUTTERFLY_IMAGES; i++) {
@@ -254,9 +265,12 @@ function setup() {
   for (let i = 0; i < numStrings; i++) {
     let stringX;
     let string;
+    // photo frame images
+    let stringImages = [photoFrameImages[i], photoFrameImages[i + 1]];
+
     if (width < 1000) {
       stringX = width / (numStrings + 1);
-      string = new String(stringX * (i + 1));
+      string = new String(stringX * (i + 1), stringImages);
     } else {
       let totalStringSpan = 800;
       let distBetweenStrings = totalStringSpan / (numStrings - 1);
@@ -267,7 +281,7 @@ function setup() {
         midStringX - floor(numStrings / 2) * distBetweenStrings;
       stringX = firstStringPositionX + distBetweenStrings * i;
 
-      string = new String(stringX);
+      string = new String(stringX, stringImages);
     }
 
     strings.push(string);
