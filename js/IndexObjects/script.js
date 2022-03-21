@@ -17,6 +17,8 @@ When the user hovers over each of these objects, this is what happens:
 
 let numFrameImages = 5;
 
+let overlapImage = false;
+
 // $(`#frame-images`).position()
 
 $(`.close`).click(() => {
@@ -142,10 +144,15 @@ let photoFrameImage = undefined;
 let photoFrameImages = [];
 let numPhotoFrameImages = 5;
 
+let clickImage = undefined;
+
 // preload()
 //
 // Preloads assets (images, sounds, fonts)
 function preload() {
+  // load click image
+  clickImage = loadImage(`assets/images/click.png`);
+
   // load photo frame image
   photoFrameImage = loadImage(`assets/images/photo-frame.png`);
 
@@ -270,7 +277,7 @@ function setup() {
     bigBubbles.push(bigBubble);
   }
 
-  // // Create a dangling string
+  // Create a dangling string
   for (let i = 0; i < numStrings; i++) {
     // tracks the image we're looking at
     let imageNumber = i;
@@ -351,6 +358,12 @@ function draw() {
   mouse.x = camera.mouseX;
   mouse.y = camera.mouseY;
 
+  // if (overlapImage) {
+  //   cursor.classList.add("hover");
+  // } else {
+  //   cursor.classList.remove("hover");
+  // }
+
   // Set bg color
   background(bg.r, bg.g, bg.b);
 
@@ -365,7 +378,21 @@ function draw() {
 
   // Update dangling string
   for (let i = 0; i < strings.length; i++) {
-    strings[i].update();
+    let string = strings[i];
+    string.update();
+
+    if (i === strings.length - 1) {
+      // Add click image
+      push();
+      let clickImageX =
+        string.photoFrame.x +
+        80 +
+        (string.images[0].width * string.photoFrameScale) / 2;
+      let clickImageY = string.photoFrame.y - 100;
+      imageMode(CENTER);
+      image(clickImage, clickImageX, clickImageY);
+      pop();
+    }
   }
 }
 
