@@ -406,7 +406,7 @@ function updateTableElements() {
 
   updateBubbles();
 
-  if (width > 400) {
+  if (width > 400 && height > 500) {
     // Release fountain if mouse hovers over whale
     releaseFountain();
 

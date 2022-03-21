@@ -8,7 +8,7 @@ class String {
 
     this.maxLength = 500;
 
-    if (height > 500) {
+    if (width > 400 && height > 500) {
       this.minLength = 200;
     } else {
       this.minLength = this.maxLength - 100;
