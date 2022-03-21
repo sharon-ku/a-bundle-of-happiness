@@ -148,11 +148,106 @@ class String {
 
   mouseReleased() {
     // Move the last particle according to the mouse
-    if (this.overlapsMouse()) {
+    if (this.overlapsMouse() && !$(`#info-box`).hasClass(`show-info-box`)) {
+      this.setCorrectInfo();
+
       // $(`#info-box`).hide("slide", { direction: "left" }, 1000);
       $(`#info-box`).show(1000);
 
       $(`#info-box`).addClass(`show-info-box`);
+    }
+  }
+
+  setCorrectInfo() {
+    // A Snail's Journey
+    if (this.imageName === `snail`) {
+      // change title
+      $(`#info-box > h1`).text(`A Snail's Journey`);
+      // change paragraph
+      $(`#info-box > p`)
+        .text(`Ring-a-ring-ding-ding! Shelee the snail got a special phone call from
+        her friend Coco. What's this all about, a game of hide-and-seek?
+        Shelee's got to get out of her comfort zone and explore the wilderness.`);
+      // change link
+      $(`#info-box > a`).attr(
+        "href",
+        "https://sharonku.itch.io/a-snails-journey"
+      );
+      // change image
+      $(`#info-box > img`).attr(
+        "src",
+        "assets/images/works/snails-journey/0.png"
+      );
+    } else if (this.imageName === `fogdog`) {
+      // change title
+      $(`#info-box > h1`).text(`Fogdog`);
+      // change paragraph
+      $(`#info-box > p`).text(
+        `Fogdog is an interactive game about a little circular character named Kay. Kay follows a routine each day: waking up in the morning to check emails, heading to work, doing tasks at work while being judged harshly by Peep the bird, then going home at night and spending some quality time saying affirmations out loud.`
+      );
+      // change link
+      $(`#info-box > a`).attr(
+        "href",
+        "https://sharon-ku.github.io/cart263/projects/project2/"
+      );
+      // change image
+      $(`#info-box > img`).attr(
+        "src",
+        "assets/images/works/snails-journey/0.png"
+      );
+    } else if (this.imageName === `water`) {
+      // change title
+      $(`#info-box > h1`).text(`The Water Scene`);
+      // change paragraph
+      $(`#info-box > p`).text(
+        `Take part in a relaxing boat ride on a river. Dodge the rocks along the way and navigate towards the sun.`
+      );
+      // change link
+      $(`#info-box > a`).attr(
+        "href",
+        "https://sharonku.itch.io/the-water-scene"
+      );
+      // change image
+      $(`#info-box > img`).attr(
+        "src",
+        "assets/images/works/snails-journey/0.png"
+      );
+    } else if (this.imageName === `saturday`) {
+      // change title
+      $(`#info-box > h1`).text(
+        `When you try to wake up on a Saturday morning [shortened title]`
+      );
+      // change paragraph
+      $(`#info-box > p`).text(
+        `Welcome to a silly narrative game inspired by waking up on a Saturday morning. You hold the power to decide what to do next.`
+      );
+      // change link
+      $(`#info-box > a`).attr(
+        "href",
+        "https://sharonku.itch.io/when-you-try-to-wake-up-on-a-saturday-morning"
+      );
+      // change image
+      $(`#info-box > img`).attr(
+        "src",
+        "assets/images/works/snails-journey/0.png"
+      );
+    } else if (this.imageName === `slap`) {
+      // change title
+      $(`#info-box > h1`).text(`Slap slap`);
+      // change paragraph
+      $(`#info-box > p`).text(
+        `Slap around and make unexpected sounds! This is a short prototype on the potentials that the player can unlock from controlling a giant hand.`
+      );
+      // change link
+      $(`#info-box > a`).attr(
+        "href",
+        "https://sharonku.itch.io/when-you-try-to-wake-up-on-a-saturday-morning"
+      );
+      // change image
+      $(`#info-box > img`).attr(
+        "src",
+        "assets/images/works/snails-journey/0.png"
+      );
     }
   }
 
