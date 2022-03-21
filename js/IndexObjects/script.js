@@ -386,7 +386,7 @@ function draw() {
       push();
       let clickImageX =
         string.photoFrame.x +
-        80 +
+        50 +
         (string.images[0].width * string.photoFrameScale) / 2;
       let clickImageY = string.photoFrame.y - 100;
       imageMode(CENTER);
@@ -404,9 +404,9 @@ function updateTableElements() {
   tableWidth = width;
   table.display(tableWidth);
 
-  updateBubbles();
+  if (width > 400 && height > 700) {
+    updateBubbles();
 
-  if (width > 400 && height > 500) {
     // Release fountain if mouse hovers over whale
     releaseFountain();
 
