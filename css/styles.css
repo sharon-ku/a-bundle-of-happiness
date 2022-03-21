@@ -774,6 +774,26 @@ footer p:hover {
     max-width: 300px;
   }
 
+  #info-box {
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 80%;
+
+    margin: 0px;
+    margin-top: 20px;
+    padding: 30px;
+  }
+
+  #info-box h1 {
+    font-size: 2rem;
+  }
+
+  #info-box p {
+    font-size: 1rem;
+  }
+
   section.hover-instructions {
     margin-top: 50px;
   }
