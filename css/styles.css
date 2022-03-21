@@ -649,7 +649,7 @@ footer p:hover {
     /* light blue */
     color: #b1eaf4;
     /* text-align: center; */
-    font-size: 4em;
+    /* font-size: 4em; */
     letter-spacing: 3px;
     /* text-transform: uppercase; */
   }
@@ -665,7 +665,7 @@ footer p:hover {
   }
 
   #my-description p {
-    font-size: 1em;
+    /* font-size: 1em; */
     letter-spacing: 0.5px;
     max-width: 400px;
   }
@@ -758,12 +758,12 @@ footer p:hover {
   }
 
   .my-name h1 {
-    font-size: 3em;
+    /* font-size: 3em; */
     letter-spacing: 2px;
   }
 
   #my-description p {
-    font-size: 1em;
+    /* font-size: 1em; */
     letter-spacing: 0.1px;
     max-width: 300px;
   }
