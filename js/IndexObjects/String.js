@@ -202,7 +202,7 @@ class String {
       $(`#info-box > h1`).text(`Fogdog`);
       // change paragraph
       $(`#info-box > p`).text(
-        `Fogdog is an interactive game about a little circular character named Kay. Kay follows a routine each day: waking up in the morning to check emails, heading to work, doing tasks at work while being judged harshly by Peep the bird, then going home at night and spending some quality time saying affirmations out loud.`
+        `Fogdog is an interactive game about Kay's first day at work. You will need a camera and microphone to progress the story.`
       );
       // change link
       $(`#info-box > a`).attr(
