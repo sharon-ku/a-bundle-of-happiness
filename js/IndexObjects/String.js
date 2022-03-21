@@ -80,7 +80,7 @@ class String {
     }
 
     if (width < 400) {
-      this.photoFrameScale = 0.5;
+      this.photoFrameScale = 0.3;
     } else {
       this.photoFrameScale = 0.8;
     }
@@ -116,7 +116,8 @@ class String {
 
     this.photoFrame.x = this.particles[this.numParticles - 1].x;
     this.photoFrame.y =
-      this.particles[this.numParticles - 1].y + this.images[0].height / 2;
+      this.particles[this.numParticles - 1].y +
+      (this.images[0].height * this.photoFrameScale) / 2;
     translate(this.photoFrame.x, this.photoFrame.y);
     // this.photoFrameScale = map(this.length, this.minLength, this.maxLength, 0.8, 1);
     // if (width < 400) {

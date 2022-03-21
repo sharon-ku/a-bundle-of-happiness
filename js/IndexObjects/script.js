@@ -406,24 +406,26 @@ function updateTableElements() {
 
   updateBubbles();
 
-  // Release fountain if mouse hovers over whale
-  releaseFountain();
+  if (width > 400) {
+    // Release fountain if mouse hovers over whale
+    releaseFountain();
 
-  // Create butterflies that have the following behaviours:
-  // If mouse hovers over plant, release butterflies at a certain ineterval
-  // Butterflies flap wings
-  createButterflies();
+    // Create butterflies that have the following behaviours:
+    // If mouse hovers over plant, release butterflies at a certain ineterval
+    // Butterflies flap wings
+    createButterflies();
 
-  // Create a globe that contains all these behaviours:
-  // Displays globe and unicorn
-  // Release snowflakes inside globe
-  // Unicorn flaps wings when mouse hovers on globe
-  createGlobe();
+    // Create a globe that contains all these behaviours:
+    // Displays globe and unicorn
+    // Release snowflakes inside globe
+    // Unicorn flaps wings when mouse hovers on globe
+    createGlobe();
 
-  // Create a ferris wheel that contains all these behaviours:
-  // Display rotating ferris wheel and seats that revolve around it
-  // Lights animation when mouse hovers over ferris wheel
-  createFerrisWheel();
+    // Create a ferris wheel that contains all these behaviours:
+    // Display rotating ferris wheel and seats that revolve around it
+    // Lights animation when mouse hovers over ferris wheel
+    createFerrisWheel();
+  }
 
   // Draw all sprites: whale animation, plant animation
   drawSprites();
