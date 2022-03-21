@@ -239,7 +239,7 @@ section.my-name {
 
 #my-description p {
   font-weight: 300;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   letter-spacing: 0.3px;
   max-width: 400px;
   /* line-height: 1.3rem; */
@@ -759,7 +759,7 @@ footer p:hover {
 
   .my-name h1 {
     /* font-size: 3em; */
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
   }
 
   #my-description p {

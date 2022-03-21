@@ -165,7 +165,7 @@ class String {
 
   mouseReleased() {
     // Move the last particle according to the mouse
-    if (this.overlapsMouse() && !$(`#info-box`).hasClass(`show-info-box`)) {
+    if (this.overlapsMouse() && $(`#info-box`).is(":hidden")) {
       this.setCorrectInfo();
 
       $(`#dark-filter`).show();
@@ -233,9 +233,7 @@ class String {
       );
     } else if (this.imageName === `saturday`) {
       // change title
-      $(`#info-box > h1`).text(
-        `When you try to wake up on a Saturday morning [shortened title]`
-      );
+      $(`#info-box > h1`).text(`When You Try to Wake Up on a Saturday Morning`);
       // change paragraph
       $(`#info-box > p`).text(
         `Welcome to a silly narrative game inspired by waking up on a Saturday morning. You hold the power to decide what to do next.`
@@ -252,7 +250,7 @@ class String {
       );
     } else if (this.imageName === `slap`) {
       // change title
-      $(`#info-box > h1`).text(`Slap slap`);
+      $(`#info-box > h1`).text(`Slap Slap`);
       // change paragraph
       $(`#info-box > p`).text(
         `Slap around and make unexpected sounds! This is a short prototype on the potentials that the player can unlock from controlling a giant hand.`
