@@ -20,7 +20,9 @@ let numFrameImages = 5;
 // $(`#frame-images`).position()
 
 $(`.close`).click(() => {
-  $(`#info-box`).removeClass(`show-info-box`);
+  // $(`#info-box`).removeClass(`show-info-box`);
+  $(`#info-box`).hide();
+  $(`#dark-filter`).hide();
 });
 
 // canvas that contains animated content

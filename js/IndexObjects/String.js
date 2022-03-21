@@ -30,11 +30,10 @@ class String {
     } else if (imageNumber === 2) {
       this.imageName = `water`;
     } else if (imageNumber === 3) {
-      this.imageName = `saturday`;
-    } else if (imageNumber === 4) {
       this.imageName = `slap`;
+    } else if (imageNumber === 4) {
+      this.imageName = `saturday`;
     }
-
     // Initialize the physics
     this.physics = new VerletPhysics2D();
     this.physics.addBehavior(new GravityBehavior(new Vec2D(0, 0.5)));
@@ -51,7 +50,7 @@ class String {
     this.photoFrameScale = 1;
 
     // Make particles
-    for (var i = 0; i < this.numParticles; i++) {
+    for (let i = 0; i < this.numParticles; i++) {
       this.particles[i] = new Particle(new Vec2D(this.x, i * this.spacing));
 
       // Anything we make, we have to add into the physics world
@@ -70,6 +69,12 @@ class String {
 
       // Lock one in place
       this.particles[0].lock();
+    }
+
+    if (width < 400) {
+      this.photoFrameScale = 0.5;
+    } else {
+      this.photoFrameScale = 0.8;
     }
   }
 
@@ -106,11 +111,11 @@ class String {
       this.particles[this.numParticles - 1].y + this.images[0].height / 2;
     translate(this.photoFrame.x, this.photoFrame.y);
     // this.photoFrameScale = map(this.length, this.minLength, this.maxLength, 0.8, 1);
-    if (width < 400) {
-      this.photoFrameScale = 0.5;
-    } else {
-      this.photoFrameScale = 0.8;
-    }
+    // if (width < 400) {
+    //   this.photoFrameScale = 0.5;
+    // } else {
+    //   this.photoFrameScale = 0.8;
+    // }
     scale(this.photoFrameScale);
 
     // this.photoFrameScale = map(
@@ -151,10 +156,12 @@ class String {
     if (this.overlapsMouse() && !$(`#info-box`).hasClass(`show-info-box`)) {
       this.setCorrectInfo();
 
-      // $(`#info-box`).hide("slide", { direction: "left" }, 1000);
-      $(`#info-box`).show(1000);
+      $(`#dark-filter`).show();
 
-      $(`#info-box`).addClass(`show-info-box`);
+      // $(`#info-box`).hide("slide", { direction: "left" }, 1000);
+      $(`#info-box`).show();
+
+      // $(`#info-box`).addClass(`show-info-box`);
     }
   }
 
@@ -166,17 +173,17 @@ class String {
       // change paragraph
       $(`#info-box > p`)
         .text(`Ring-a-ring-ding-ding! Shelee the snail got a special phone call from
-        her friend Coco. What's this all about, a game of hide-and-seek?
-        Shelee's got to get out of her comfort zone and explore the wilderness.`);
+        her friend. She's invited to play in a game of hide-and-seek.
+        Shelee has to get out of her shell and explore the wilderness.`);
       // change link
       $(`#info-box > a`).attr(
         "href",
         "https://sharonku.itch.io/a-snails-journey"
       );
       // change image
-      $(`#info-box > img`).attr(
+      $(`#info-box > figure > img`).attr(
         "src",
-        "assets/images/works/snails-journey/0.png"
+        "assets/images/index/screenshots/snail/5.png"
       );
     } else if (this.imageName === `fogdog`) {
       // change title
@@ -191,9 +198,9 @@ class String {
         "https://sharon-ku.github.io/cart263/projects/project2/"
       );
       // change image
-      $(`#info-box > img`).attr(
+      $(`#info-box > figure > img`).attr(
         "src",
-        "assets/images/works/snails-journey/0.png"
+        "assets/images/index/screenshots/fogdog/0.png"
       );
     } else if (this.imageName === `water`) {
       // change title
@@ -208,9 +215,9 @@ class String {
         "https://sharonku.itch.io/the-water-scene"
       );
       // change image
-      $(`#info-box > img`).attr(
+      $(`#info-box > figure > img`).attr(
         "src",
-        "assets/images/works/snails-journey/0.png"
+        "assets/images/index/screenshots/water/0.png"
       );
     } else if (this.imageName === `saturday`) {
       // change title
@@ -227,9 +234,9 @@ class String {
         "https://sharonku.itch.io/when-you-try-to-wake-up-on-a-saturday-morning"
       );
       // change image
-      $(`#info-box > img`).attr(
+      $(`#info-box > figure > img`).attr(
         "src",
-        "assets/images/works/snails-journey/0.png"
+        "assets/images/index/screenshots/saturday/0.png"
       );
     } else if (this.imageName === `slap`) {
       // change title
@@ -241,12 +248,12 @@ class String {
       // change link
       $(`#info-box > a`).attr(
         "href",
-        "https://sharonku.itch.io/when-you-try-to-wake-up-on-a-saturday-morning"
+        "https://sharonku.itch.io/slap-slap?secret=FcuxMz3rBnJZhDUfamK8vNB6Y"
       );
       // change image
-      $(`#info-box > img`).attr(
+      $(`#info-box > figure > img`).attr(
         "src",
-        "assets/images/works/snails-journey/0.png"
+        "assets/images/index/screenshots/slap/0.png"
       );
     }
   }
@@ -263,9 +270,15 @@ class String {
       mouseY <
         this.photoFrame.y + (this.images[0].height * this.photoFrameScale) / 2
     ) {
+      // this.photoFrameScale = 0.9;
       console.log(this.imageName);
       return true;
     } else {
+      // if (width < 400) {
+      //   this.photoFrameScale = 0.5;
+      // } else {
+      //   this.photoFrameScale = 0.8;
+      // }
       return false;
     }
   }
