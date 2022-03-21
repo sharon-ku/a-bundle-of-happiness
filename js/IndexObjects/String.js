@@ -1,13 +1,19 @@
 class String {
-  constructor(x, images) {
+  constructor(x, images, imageNumber) {
     this.physics;
     this.particles = [];
     this.spring = [];
     this.numParticles = 50;
     this.numSprings = this.numParticles - 1;
 
-    this.minLength = 200;
-    this.maxLength = 600;
+    this.maxLength = 500;
+
+    if (height > 500) {
+      this.minLength = 200;
+    } else {
+      this.minLength = this.maxLength - 100;
+    }
+
     this.length = random(this.minLength, this.maxLength);
 
     this.stiffness = 0.9;
@@ -15,6 +21,19 @@ class String {
 
     this.x = x;
     this.images = images;
+
+    // Set image name
+    if (imageNumber === 0) {
+      this.imageName = `snail`;
+    } else if (imageNumber === 1) {
+      this.imageName = `fogdog`;
+    } else if (imageNumber === 2) {
+      this.imageName = `water`;
+    } else if (imageNumber === 3) {
+      this.imageName = `saturday`;
+    } else if (imageNumber === 4) {
+      this.imageName = `slap`;
+    }
 
     // Initialize the physics
     this.physics = new VerletPhysics2D();
@@ -28,6 +47,8 @@ class String {
       x: undefined,
       y: undefined,
     };
+
+    this.photoFrameScale = 1;
 
     // Make particles
     for (var i = 0; i < this.numParticles; i++) {
@@ -53,6 +74,8 @@ class String {
   }
 
   update() {
+    this.overlapsMouse();
+
     // Update the physics world
     this.physics.update();
 
@@ -80,12 +103,17 @@ class String {
 
     this.photoFrame.x = this.particles[this.numParticles - 1].x;
     this.photoFrame.y =
-      this.particles[this.numParticles - 1].y + photoFrameImage.height / 2;
+      this.particles[this.numParticles - 1].y + this.images[0].height / 2;
     translate(this.photoFrame.x, this.photoFrame.y);
-    photoFrameScale = map(this.length, this.minLength, this.maxLength, 0.8, 1);
-    scale(photoFrameScale);
+    // this.photoFrameScale = map(this.length, this.minLength, this.maxLength, 0.8, 1);
+    if (width < 400) {
+      this.photoFrameScale = 0.5;
+    } else {
+      this.photoFrameScale = 0.8;
+    }
+    scale(this.photoFrameScale);
 
-    // photoFrameScale = map(
+    // this.photoFrameScale = map(
     //   this.particles[this.numParticles - 1].x,
     //   307,
     //   537,
@@ -95,31 +123,52 @@ class String {
     image(
       this.images[0],
       0,
-      0 - ((1 - photoFrameScale) * photoFrameImage.height) / 2
+      0 - ((1 - this.photoFrameScale) * this.images[0].height) / 2 - 30
     );
     pop();
 
     // Move the last particle according to the mouse
     if (mouseIsPressed && this.overlapsMouse()) {
-      this.particles[this.numParticles - 1].x = mouseX;
+      // // FOR FUN:
+      // this.particles[this.numParticles - 1].x = mouseX;
       // this.particles[this.numParticles - 1].x = constrain(
       //   this.particles[this.numParticles - 1].x,
       //   146,
       //   340
       // );
       // particles[numParticles-1].y = mouseY;
+      // $(`#info-box`).hide("slide", { direction: "left" }, 1000);
+      // $(`#info-box`).toggle();
+      //
+      // console.log(this.imageName);
+      //
+      // console.log(mouseX);
+    }
+  }
 
-      console.log(mouseX);
+  mouseReleased() {
+    // Move the last particle according to the mouse
+    if (this.overlapsMouse()) {
+      // $(`#info-box`).hide("slide", { direction: "left" }, 1000);
+      $(`#info-box`).show(1000);
+
+      $(`#info-box`).addClass(`show-info-box`);
     }
   }
 
   overlapsMouse() {
     if (
-      mouseX > this.photoFrame.x - photoFrameImage.width / 2 &&
-      mouseX < this.photoFrame.x + photoFrameImage.width / 2 &&
-      mouseY > this.photoFrame.y - photoFrameImage.height / 2 &&
-      mouseY < this.photoFrame.y + photoFrameImage.height / 2
+      mouseX >
+        this.photoFrame.x - (this.images[0].width * this.photoFrameScale) / 2 &&
+      mouseX <
+        this.photoFrame.x + (this.images[0].width * this.photoFrameScale) / 2 &&
+      mouseY >
+        this.photoFrame.y -
+          (this.images[0].height * this.photoFrameScale) / 2 &&
+      mouseY <
+        this.photoFrame.y + (this.images[0].height * this.photoFrameScale) / 2
     ) {
+      console.log(this.imageName);
       return true;
     } else {
       return false;

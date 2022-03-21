@@ -15,6 +15,14 @@ When the user hovers over each of these objects, this is what happens:
 4) The Ferris wheel lights up brilliantly.
 **************************************************/
 
+let numFrameImages = 5;
+
+// $(`#frame-images`).position()
+
+$(`.close`).click(() => {
+  $(`#info-box`).removeClass(`show-info-box`);
+});
+
 // canvas that contains animated content
 let canvas;
 let canvasX;
@@ -127,7 +135,6 @@ let strings = [];
 let numStrings = 5;
 
 let photoFrames = [];
-let photoFrameScale = 1;
 let photoFrameImage = undefined;
 
 let photoFrameImages = [];
@@ -263,6 +270,9 @@ function setup() {
 
   // // Create a dangling string
   for (let i = 0; i < numStrings; i++) {
+    // tracks the image we're looking at
+    let imageNumber = i;
+
     let stringX;
     let string;
     // photo frame images
@@ -270,7 +280,7 @@ function setup() {
 
     if (width < 1000) {
       stringX = width / (numStrings + 1);
-      string = new String(stringX * (i + 1), stringImages);
+      string = new String(stringX * (i + 1), stringImages, imageNumber);
     } else {
       let totalStringSpan = 800;
       let distBetweenStrings = totalStringSpan / (numStrings - 1);
@@ -281,7 +291,7 @@ function setup() {
         midStringX - floor(numStrings / 2) * distBetweenStrings;
       stringX = firstStringPositionX + distBetweenStrings * i;
 
-      string = new String(stringX, stringImages);
+      string = new String(stringX, stringImages, imageNumber);
     }
 
     strings.push(string);
@@ -516,5 +526,19 @@ function updateBigBubbles() {
     let bigBubble = bigBubbles[i];
 
     bigBubble.update();
+  }
+}
+
+// function mousePressed() {
+//   // Click on photo frame
+//   for (let i = 0; i < strings.length; i++) {
+//     strings[i].mousePressed();
+//   }
+// }
+
+function mouseReleased() {
+  // Click on photo frame
+  for (let i = 0; i < strings.length; i++) {
+    strings[i].mouseReleased();
   }
 }

@@ -1,5 +1,5 @@
 /* Poppins */
-@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Buda:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap");
@@ -13,7 +13,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  cursor: none;
+  /* UNCOMMENT IF WANT CURSOR */
+  /* cursor: none; */
 }
 
 /* === DESKTOP LAYOUT INHERITS FROM MOBILE AND TABLET 980PX and higher === */
@@ -193,8 +194,8 @@ section.article {
   flex-flow: column;
   height: 70vh;
 
-  margin-left: 20px;
-  margin-top: 15px;
+  margin-left: 30px;
+  margin-top: 30px;
   /* justify-content: center; */
   /* align-items: center; */
 }
@@ -205,11 +206,11 @@ section.my-name {
 }
 
 .my-name h1 {
-  font-family: "Poppins", Arial, sans-serif;
-  /* font-family: "Buda", cursive; */
+  /* font-family: "Poppins", Arial, sans-serif;
+  font-family: "Buda", cursive; */
   /* font-family: "Alice", serif; */
   /* font-family: "Mansalva", cursive; */
-  /* font-family: "Forum", cursive; */
+  font-family: "Forum", cursive;
   /* font-family: "Sorts Mill Goudy", serif; */
 
   /* font-family: basel-neue, sans-serif;
@@ -220,25 +221,28 @@ section.my-name {
   font-weight: normal;
   /* light blue */
   color: #b1eaf4;
-  font-size: 2em;
+  font-size: 2.5rem;
   letter-spacing: 3px;
   /* text-transform: uppercase; */
 }
 
 #my-description {
   font-family: "Poppins", Arial, sans-serif;
+  /* font-family: "Buda", cursive; */
   /* light blue */
   color: #b1eaf4;
   /* text-align: center; */
-  margin-top: 10px;
+  margin-top: 5px;
 
   /* background: green; */
 }
 
 #my-description p {
-  font-size: 1em;
-  letter-spacing: 0.5px;
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
   max-width: 400px;
+  /* line-height: 1.3rem; */
 }
 
 section.hover-instructions {
@@ -259,6 +263,115 @@ section.hover-instructions {
   color: #fdfeb8;
   letter-spacing: 0.5px;
   max-width: 250px;
+}
+
+#frame-images {
+}
+
+#placeholder-gallery {
+  text-align: center;
+  position: fixed;
+  top: 10%;
+  /* left: calc(${x}px - 50%); */
+  left: 30%;
+}
+
+#placeholder-gallery img {
+  width: 85%;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.close a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: black;
+  border: 1px solid black;
+  /* border-radius: 50%; */
+  text-align: center;
+  padding: 2.5px 10px;
+}
+
+.close a:hover {
+  background: black;
+  color: white;
+}
+
+#info-box {
+  transition: all 1s;
+  /* display: none; */
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  position: fixed;
+  top: 0px;
+  /* UNCOMMENT FOR ACTUl */
+  right: -500px;
+  width: 40%;
+  max-width: 400px;
+
+  height: 80vh;
+  background: white;
+  margin: 30px;
+  padding: 30px;
+
+  /* transform: translateX(500px); */
+}
+
+.show-info-box {
+  transform: translateX(-500px);
+}
+
+#info-box h1 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Forum", cursive;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#info-box p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+#info-box #play {
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* background: red; */
+  padding: 15px 30px;
+
+  color: black;
+
+  transition: all 0.5s;
+}
+
+#info-box #play:hover {
+  background: #a7d6ec;
+  /* color: white; */
+  border-radius: 20px;
+}
+
+#info-box figure {
+  margin-top: 60px;
+  width: 100%;
+}
+
+#info-box figure img {
+  width: 100%;
 }
 
 #table-of-contents {
@@ -489,11 +602,16 @@ footer p {
   margin: 20px;
   text-transform: uppercase;
   font-weight: normal;
+  font-size: 1.3rem;
 
   font-family: "Poppins", Arial, sans-serif;
 
   color: white;
   letter-spacing: 0.5px;
+}
+
+footer p:hover {
+  cursor: pointer;
 }
 
 /* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
@@ -505,22 +623,10 @@ footer p {
   }
 
   .my-name h1 {
-    font-family: "Poppins", Arial, sans-serif;
-    /* font-family: "Buda", cursive; */
-    /* font-family: "Alice", serif; */
-    /* font-family: "Mansalva", cursive; */
-    /* font-family: "Forum", cursive; */
-    /* font-family: "Sorts Mill Goudy", serif; */
-
-    /* font-family: basel-neue, sans-serif;
-    font-weight: 700;
-    font-style: normal; */
-
-    /* font-family: "Marcellus", serif; */
     font-weight: normal;
     /* light blue */
     color: #b1eaf4;
-    text-align: center;
+    /* text-align: center; */
     font-size: 4em;
     letter-spacing: 3px;
     /* text-transform: uppercase; */
@@ -530,7 +636,7 @@ footer p {
     font-family: "Poppins", Arial, sans-serif;
     /* light blue */
     color: #b1eaf4;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 10px;
 
     /* background: green; */
