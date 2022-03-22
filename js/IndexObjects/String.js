@@ -186,9 +186,9 @@ class String {
       // change paragraph
       $(`#info-box > article`)
         .html(`<p>Ring-a-ring-ding-ding! Shelee the snail got a special phone call from
-        her friend. She's invited to play in a game of hide-and-seek.
+        her friend. She's invited to play a game of hide-and-seek.
         Shelee has to get out of her shell and explore the wilderness.</p>
-        <p>This narrative Bitsy game centers around the positive message of friendship. Interacting with colored characters and objects is key in progressing the narrative.</p>`);
+        <p>This narrative Bitsy game centers around the positive message of friendship. Interacting with colored characters and objects is key in progressing the story.</p>`);
       // change link
       $(`#info-box > a`).attr(
         "href",
@@ -206,7 +206,7 @@ class String {
       $(`#info-box > h1`).text(`Fogdog`);
       // change paragraph
       $(`#info-box > article`).html(
-        `<p>Fogdog is an interactive game about Kay's first day at work. You will need a camera and microphone to progress the story.</p>
+        `<p>Fogdog is an interactive game about Kay's first day at work. You will need a camera and microphone.</p>
         <p>My goal is to have the user dive into Kay's world and experience different interactions that enable them to feel part of the story. For instance, I programmed Kay to mirror the user's face in the morning and night scenes, so that <em>you</em> are Kay!</p>`
       );
       // change link
@@ -228,7 +228,8 @@ class String {
       $(`#info-box > h1`).text(`The Water Scene`);
       // change paragraph
       $(`#info-box > article`).html(
-        `<p>Take part in a relaxing boat ride on a river. Dodge the rocks along the way and navigate towards the sun.</p>`
+        `<p>Take part in a relaxing boat ride on a river. Dodge the rocks along the way and navigate towards the sun.</p>
+        <p>I built this prototype to understand how the players feel about the boat’s movement together with the river environment. I wish to develop this further by introducing a narrative that takes players on an emotive journey told through visuals, environment, and music.</p>`
       );
       // change link
       $(`#info-box > a`).attr(
