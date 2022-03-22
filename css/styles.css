@@ -231,6 +231,7 @@ section.my-name {
 }
 
 #my-description {
+  user-select: none;
   text-shadow: 0px 0px 10px #204c61;
 
   font-family: "Poppins", Arial, sans-serif;
@@ -620,6 +621,9 @@ footer {
   width: 100%;
 
   text-align: right;
+
+  display: flex;
+  justify-content: flex-end;
 }
 
 footer a {
@@ -636,6 +640,9 @@ footer p {
 
   color: white;
   letter-spacing: 0.5px;
+
+  /* margin-bottom: 5px; */
+  border-bottom: 1px solid white;
 }
 
 footer p:hover {
@@ -647,7 +654,6 @@ footer p:hover {
   /* COPY PASTED CENTERING TEXT INFO */
   section.my-name {
     width: 100%;
-    user-select: none;
   }
 
   .my-name h1 {
