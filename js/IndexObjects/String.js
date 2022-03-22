@@ -257,10 +257,7 @@ class String {
         `Slap around and make unexpected sounds! This is a short prototype on the potentials that the player can unlock from controlling a giant hand.`
       );
       // change link
-      $(`#info-box > a`).attr(
-        "href",
-        "https://sharonku.itch.io/slap-slap?secret=FcuxMz3rBnJZhDUfamK8vNB6Y"
-      );
+      $(`#info-box > a`).attr("href", "https://sharonku.itch.io/slap-slap");
       // change image
       $(`#info-box > figure > img`).attr(
         "src",
