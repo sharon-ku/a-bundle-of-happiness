@@ -337,7 +337,7 @@ section.hover-instructions {
   /* UNCOMMENT FOR ACTUl */
   /* right: -500px; */
   width: 50%;
-  max-width: 800px;
+  max-width: 700px;
   overflow-y: scroll;
 
   height: 90vh;
@@ -364,7 +364,11 @@ section.hover-instructions {
 }
 
 #info-box p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+#info-box article {
   margin-bottom: 30px;
 }
 
@@ -397,6 +401,10 @@ section.hover-instructions {
 
 #info-box figure img {
   width: 100%;
+}
+
+#info-box #tools-para {
+  font-size: 0.8rem;
 }
 
 #table-of-contents {

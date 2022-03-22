@@ -184,10 +184,11 @@ class String {
       // change title
       $(`#info-box > h1`).text(`A Snail's Journey`);
       // change paragraph
-      $(`#info-box > p`)
-        .text(`Ring-a-ring-ding-ding! Shelee the snail got a special phone call from
+      $(`#info-box > article`)
+        .html(`<p>Ring-a-ring-ding-ding! Shelee the snail got a special phone call from
         her friend. She's invited to play in a game of hide-and-seek.
-        Shelee has to get out of her shell and explore the wilderness.`);
+        Shelee has to get out of her shell and explore the wilderness.</p>
+        <p>This narrative Bitsy game centers around the positive message of friendship. Interacting with colored characters and objects is key in progressing the narrative.</p>`);
       // change link
       $(`#info-box > a`).attr(
         "href",
@@ -198,12 +199,15 @@ class String {
         "src",
         "assets/images/index/screenshots/snail/5.png"
       );
+      // change tools
+      $(`#info-box > #tools-para > #tools`).text(`Bitsy`);
     } else if (this.imageName === `fogdog`) {
       // change title
       $(`#info-box > h1`).text(`Fogdog`);
       // change paragraph
-      $(`#info-box > p`).text(
-        `Fogdog is an interactive game about Kay's first day at work. You will need a camera and microphone to progress the story.`
+      $(`#info-box > article`).html(
+        `<p>Fogdog is an interactive game about Kay's first day at work. You will need a camera and microphone to progress the story.</p>
+        <p>My goal is to have the user dive into Kay's world and experience different interactions that enable them to feel part of the story. For instance, I programmed Kay to mirror the user's face in the morning and night scenes, so that <em>you</em> are Kay!</p>`
       );
       // change link
       $(`#info-box > a`).attr(
@@ -215,12 +219,16 @@ class String {
         "src",
         "assets/images/index/screenshots/fogdog/0.png"
       );
+      // change tools
+      $(`#info-box > #tools-para > #tools`).text(
+        `HTML, CSS, JavaScript, jQuery, jQueryUI, p5.js library, ml5.js’ FaceApi, annyang library`
+      );
     } else if (this.imageName === `water`) {
       // change title
       $(`#info-box > h1`).text(`The Water Scene`);
       // change paragraph
-      $(`#info-box > p`).text(
-        `Take part in a relaxing boat ride on a river. Dodge the rocks along the way and navigate towards the sun.`
+      $(`#info-box > article`).html(
+        `<p>Take part in a relaxing boat ride on a river. Dodge the rocks along the way and navigate towards the sun.</p>`
       );
       // change link
       $(`#info-box > a`).attr(
@@ -232,12 +240,15 @@ class String {
         "src",
         "assets/images/index/screenshots/water/0.png"
       );
+      // change tools
+      $(`#info-box > #tools-para > #tools`).text(`Unity`);
     } else if (this.imageName === `saturday`) {
       // change title
       $(`#info-box > h1`).text(`When You Try to Wake Up on a Saturday Morning`);
       // change paragraph
-      $(`#info-box > p`).text(
-        `Welcome to a silly narrative game inspired by waking up on a Saturday morning. You hold the power to decide what to do next.`
+      $(`#info-box > article`).html(
+        `<p>Welcome to a silly narrative game inspired by waking up on a Saturday morning. You hold the power to decide what to do next.</p>
+        <p>During the pandemic, I often experienced a tension between wanting to be hyper productive and wanting to allow myself to rest. I was drawn to the idea of designing a story focused solely on the lack of productivity. Thus this challenge arose: How many narrative branches can I create for a character who is determined to stay in bed on the weekend?</p>`
       );
       // change link
       $(`#info-box > a`).attr(
@@ -249,12 +260,15 @@ class String {
         "src",
         "assets/images/index/screenshots/saturday/0.png"
       );
+      // change tools
+      $(`#info-box > #tools-para > #tools`).text(`Twine`);
     } else if (this.imageName === `slap`) {
       // change title
       $(`#info-box > h1`).text(`Slap Slap`);
       // change paragraph
-      $(`#info-box > p`).text(
-        `Slap around and make unexpected sounds! This is a short prototype on the potentials that the player can unlock from controlling a giant hand.`
+      $(`#info-box > article`).html(
+        `<p>Slap around and make unexpected sounds! This is a short prototype exploring the potentials that the player can unlock from controlling a giant hand.</p>
+        <p>My goal was to create an element of surprise from combining the action of slapping with the effects produced from the objects. This game can also be an outlet for releasing negative feelings through the intentional manufacturing of chaos.</p>`
       );
       // change link
       $(`#info-box > a`).attr("href", "https://sharonku.itch.io/slap-slap");
@@ -263,6 +277,8 @@ class String {
         "src",
         "assets/images/index/screenshots/slap/0.png"
       );
+      // change tools
+      $(`#info-box > #tools-para > #tools`).text(`Unity`);
     }
   }
 
