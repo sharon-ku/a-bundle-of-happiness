@@ -221,12 +221,12 @@ section.my-name {
   font-weight: 700;
   font-style: normal; */
 
-  /* font-family: "Marcellus", serif; */
+  font-family: "Marcellus", serif;
   font-weight: normal;
   /* light blue */
   color: #b1eaf4;
   font-size: 2.5rem;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
   /* text-transform: uppercase; */
 }
 

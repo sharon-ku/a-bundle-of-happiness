@@ -154,6 +154,7 @@ class String {
       //   146,
       //   340
       // );
+      // STOP HERE FOR FUN -----------
       // particles[numParticles-1].y = mouseY;
       // $(`#info-box`).hide("slide", { direction: "left" }, 1000);
       // $(`#info-box`).toggle();
