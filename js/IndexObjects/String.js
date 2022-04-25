@@ -232,7 +232,9 @@ class String {
       // change paragraph
       $(`#info-box > article`).html(
         `<p>Take part in a relaxing boat ride on a river. Dodge the rocks along the way and navigate towards the sun.</p>
-        <p>This prototype was built to understand how the players feel about the boat’s movement together with the river environment. The environmental storytelling takes players on an emotive journey through visuals and music.</p>`
+        <p>This prototype was built to understand how the players feel about the boat’s movement together with the river environment. The environmental storytelling takes players on an emotive journey through visuals and music.</p>
+        <p><b>Equipment needed:</b> speakers/headphones</p>
+        `
       );
       // change link
       $(`#info-box > a`).attr(
@@ -272,7 +274,9 @@ class String {
       // change paragraph
       $(`#info-box > article`).html(
         `<p>Slap around and make unexpected sounds! This prototype explores the potentials that the player can unlock from controlling a giant hand.</p>
-        <p><em>Slap Slap</em> creates an element of surprise from combining the action of slapping with the effects produced from the objects—look out for Easter eggs! This game serves as an outlet for releasing negative feelings through the intentional manufacturing of chaos and joy.</p>`
+        <p><em>Slap Slap</em> creates an element of surprise from combining the action of slapping with the effects produced from the objects—look out for Easter eggs! This game serves as an outlet for releasing negative feelings through the intentional manufacturing of chaos and joy.</p>
+        <p><b>Equipment needed:</b> speakers/headphones</p>
+        `
       );
       // change link
       $(`#info-box > a`).attr("href", "https://sharonku.itch.io/slap-slap");
