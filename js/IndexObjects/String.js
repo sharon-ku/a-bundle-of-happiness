@@ -207,8 +207,10 @@ class String {
       $(`#info-box > h1`).text(`Fogdog`);
       // change paragraph
       $(`#info-box > article`).html(
-        `<p>Fogdog is an interactive game about Kay's first day at work. You will need a camera and microphone.</p>
-        <p>My goal is to have the user dive into Kay's world and experience different interactions that enable them to feel part of the story. For instance, I programmed Kay to mirror the user's face in the morning and night scenes, so that <em>you</em> are Kay!</p>`
+        `<p>Fogdog is an interactive game about Kay's first day working at a restaurant.</p>
+        <p>Dive into Kay's world through a wide range of interactions (speak into the mic, listen to your boss talk, move your mouse frantically, wink at your camera). For instance, using the camera, Kay mirrors your face in the morning and night scenes, so that <em>you</em> are Kay!</p>
+        <p><b>Equipment needed:</b> camera (make sure your head is visible to the camera), microphone, speakers/ headphones</p>
+        `
       );
       // change link
       $(`#info-box > a`).attr(
@@ -230,7 +232,7 @@ class String {
       // change paragraph
       $(`#info-box > article`).html(
         `<p>Take part in a relaxing boat ride on a river. Dodge the rocks along the way and navigate towards the sun.</p>
-        <p>I built this prototype to understand how the players feel about the boat’s movement together with the river environment. I wish to develop this further by introducing a narrative that takes players on an emotive journey told through visuals, environment, and music.</p>`
+        <p>This prototype was built to understand how the players feel about the boat’s movement together with the river environment. The environmental storytelling takes players on an emotive journey through visuals and music.</p>`
       );
       // change link
       $(`#info-box > a`).attr(
@@ -269,8 +271,8 @@ class String {
       $(`#info-box > h1`).text(`Slap Slap`);
       // change paragraph
       $(`#info-box > article`).html(
-        `<p>Slap around and make unexpected sounds! This is a short prototype exploring the potentials that the player can unlock from controlling a giant hand.</p>
-        <p>My goal was to create an element of surprise from combining the action of slapping with the effects produced from the objects. This game can also be an outlet for releasing negative feelings through the intentional manufacturing of chaos.</p>`
+        `<p>Slap around and make unexpected sounds! This prototype explores the potentials that the player can unlock from controlling a giant hand.</p>
+        <p><em>Slap Slap</em> creates an element of surprise from combining the action of slapping with the effects produced from the objects—look out for Easter eggs! This game serves as an outlet for releasing negative feelings through the intentional manufacturing of chaos and joy.</p>`
       );
       // change link
       $(`#info-box > a`).attr("href", "https://sharonku.itch.io/slap-slap");
