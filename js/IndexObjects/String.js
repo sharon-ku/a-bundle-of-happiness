@@ -231,8 +231,8 @@ class String {
       $(`#info-box > h1`).text(`The Water Scene`);
       // change paragraph
       $(`#info-box > article`).html(
-        `<p>Take part in a relaxing boat ride on a river. Dodge the rocks along the way and navigate towards the sun.</p>
-        <p>This prototype was built to understand how the players feel about the boat’s movement together with the river environment. Embark on an emotive, introspective journey accompanied by music.</p>
+        `<p>It's just you, the calm, and the river. Take part in a relaxing boat ride and dodge the rocks along the way.
+        <p>Embark on an meditative journey through the environment and music.</p>
         <p><b>Equipment needed:</b> speakers/headphones</p>
         `
       );
